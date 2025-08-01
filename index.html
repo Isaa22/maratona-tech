@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Emergencial | Solução para Professores Ausentes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="Aula Emergencial">
+                <span>Aula Emergencial</span>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#como-funciona">Como Funciona</a></li>
+                    <li><a href="#materias">Matérias</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Nunca mais fique sem aula!</h1>
+                <p>Quando o professor falta, nossa plataforma gera conteúdo educacional de qualidade para manter seu aprendizado em dia.</p>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Pesquise o tópico da aula...">
+                    <button id="search-btn" class="btn-primary">Gerar Aula</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/hero-bg.jpg" alt="Estudantes aprendendo">
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona" class="como-funciona section-padding">
+        <div class="container">
+            <h2 class="section-title">Como Funciona</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>1. Pesquise</h3>
+                    <p>Digite o tópico ou matéria que você precisa estudar.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>2. Processamos</h3>
+                    <p>Nossa IA analisa e estrutura o conteúdo educacional.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>3. Aprenda</h3>
+                    <p>Receba uma aula completa com explicações e exercícios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="materias" class="materias section-padding">
+        <div class="container">
+            <h2 class="section-title">Matérias Disponíveis</h2>
+            <div class="materias-grid">
+                <div class="materia-card">
+                    <div class="materia-icon">
+                        <i class="fas fa-square-root-alt"></i>
+                    </div>
+                    <h3>Matemática</h3>
+                    <p>Álgebra, Geometria, Cálculo e mais.</p>
+                    <button class="btn-secondary" data-materia="matematica">Gerar Aula</button>
+                </div>
+                <div class="materia-card">
+                    <div class="materia-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Ciências</h3>
+                    <p>Física, Química, Biologia.</p>
+                    <button class="btn-secondary" data-materia="ciencias">Gerar Aula</button>
+                </div>
+                <div class="materia-card">
+                    <div class="materia-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Português</h3>
+                    <p>Gramática, Literatura, Redação.</p>
+                    <button class="btn-secondary" data-materia="portugues">Gerar Aula</button>
+                </div>
+                <div class="materia-card">
+                    <div class="materia-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>História</h3>
+                    <p>Brasil, Mundial, Geografia.</p>
+                    <button class="btn-secondary" data-materia="historia">Gerar Aula</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resultado" class="resultado section-padding hidden">
+        <div class="container">
+            <div class="resultado-header">
+                <h2 class="section-title">Aula Gerada</h2>
+                <button id="print-btn" class="btn-secondary"><i class="fas fa-print"></i> Imprimir</button>
+            </div>
+            <div id="aula-content" class="aula-content">
+                <!-- Conteúdo da aula será inserido aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre section-padding">
+        <div class="container">
+            <div class="sobre-content">
+                <h2 class="section-title">Sobre o Projeto</h2>
+                <p>Aula Emergencial nasceu da necessidade de estudantes que frequentemente ficam sem aula quando professores faltam. Nossa missão é garantir que o aprendizado nunca pare.</p>
+                <p>Utilizamos tecnologia de ponta e parcerias com especialistas em educação para oferecer conteúdo de qualidade, alinhado com as diretrizes educacionais.</p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">+500</span>
+                        <span class="stat-label">Tópicos disponíveis</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">+10k</span>
+                        <span class="stat-label">Aulas geradas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Satisfação</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sobre-image">
+                <img src="assets/images/feature-icon.svg" alt="Sobre o projeto">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato section-padding">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <form id="contato-form" class="contato-form">
+                <div class="form-group">
+                    <input type="text" id="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.svg" alt="Aula Emergencial">
+                    <span>Aula Emergencial</span>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#materias">Matérias</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Aula Emergencial. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
